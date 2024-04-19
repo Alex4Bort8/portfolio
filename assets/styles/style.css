@@ -1,14 +1,12 @@
 
 
-:root{
-    /*Insira a variavel das outras cores inspecionando o modelo do figma*/
-    /*Se esforce para trabalhar com variáveis, é uma dica profissional valiosa*/
+:root{    
    --cor-de-fundo: #F5F5F5;
    --cor-de-link: #000;   
    --cor-secundaria: #464646;
    --cor-primaria: #EAF2FD;
    --cor-terciaria: #FFFFFF;
-
+   --cor-quartenaria: #2A7AE4;
 }
 
 body {
@@ -127,6 +125,11 @@ a{
 
 .title__network__item{
     margin-right: 20px; 
+}
+
+.title__profile{
+    width: 40%;
+    height: auto;
 }
 
 /*Sessão About*/
@@ -299,7 +302,10 @@ a{
     background-color: var(--cor-terciaria);
     width: 368px;
     height: 286px;
-    padding: 16px;
+    padding: 16px; 
+    display: flex;
+    justify-content: center; 
+    align-items: center;       
 }
 
 .academic__courses__item__title {
@@ -344,23 +350,24 @@ a{
     display: flex;    
     flex-direction: row;
     gap:16px;
+    align-items: center;
 }
 
 .experience__img{
-    width: 752px;
+    width: 522px;
     height: 406px;
 }
 
 .experience__info{
     display: flex;    
     flex-direction: column;
-    align-items:center;
+    align-items:flex-start;
     gap:8px;
 }
 
 .experience__title{
     font-family: 'Raleway';
-    font-size: 32px;
+    font-size: 22px;
     font-weight: bold;
     color: var(--cor-secundaria);
 }
@@ -378,16 +385,27 @@ a{
     gap:16px;
 }
 
-.experience__repo{
-
+.experiencia__botao__repo{
+    width: 116px;
+    height: 51px;
+    font-family: 'Raleway';
+    font-size: 16px;
+    font-weight: normal;
+    color:var(--cor-quartenaria);
+    background-color: var(--cor-terciaria);
+    border-color: var(--cor-quartenaria);
 }
 
-.experiencia__botao--repo{
-
-}
-
-.experience__demo{
-
+.experiencia__botao__demo{
+    width: 105px;
+    height: 51px;
+    font-family: 'Raleway';
+    font-size: 16px;
+    font-weight: normal;
+    background-color:var(--cor-quartenaria);
+    color: var(--cor-terciaria);
+    border: none;
+    outline: none;
 }
 
 /*contato rodape*/
@@ -400,12 +418,20 @@ a{
 
 /*Contato*/
 
-.formcontato__contacto{
-    display: flex;    
-    flex-direction: row;
+.formcontato{       
     gap:10px;
     padding: 64px;
-    background-color: var(--cor-primaria);
+    background-color: var(--cor-primaria);    
+    height: 788px;
+}
+
+.formcontato__contacto{
+    display: flex;    
+    flex-direction: row;   
+    gap:16px;
+    padding-top: 64px;
+    width: 1136;        
+    height: 660px;
 }
 
 .formcontato__img{
@@ -445,6 +471,41 @@ a{
     gap:32px;
 }
 
+.formcontato__input{
+    gap:8px;
+    height: 56px;
+    background-color: var(--cor-terciaria);
+    font-family: 'Raleway';
+    font-size: 16px;
+    font-weight: normal;
+    color: var(--cor-secundaria);
+    border-radius:4px;
+    border: none;
+    outline: none;
+}
+
+.formcontato__textarea{
+    font-family: 'Raleway';
+    font-size: 16px;
+    font-weight: normal;
+    color: var(--cor-secundaria);
+    border-radius:4px;
+    border: none;
+    outline: none;
+    resize: none;
+    gap:9px;
+}
+
+.formcontato__botao{
+    background-color:var(--cor-quartenaria);
+    color: var(--cor-terciaria);
+    width: 165px;
+    height: 51px;
+    border: none;
+    outline: none;
+}
+
+
 /*footeer*/
 
 .footer{
@@ -460,9 +521,6 @@ a{
     text-align: center;
     line-height:normal;
 }
-
-/* Chegou a hora de se desafiar com a responsividade, 
-utilize como referência os breakpoints @media abaixo*/
 
 /*Tablet*/
 @media (min-width: 768px) {
